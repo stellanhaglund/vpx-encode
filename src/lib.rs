@@ -188,7 +188,7 @@ impl Encoder {
         })
     }
 
-    pub fn encode(&mut self, pts: i64, data: &[u8]) -> Result<Packets> {
+    pub fn encode(&mut self, pts: u64, data: &[u8]) -> Result<Packets> {
         assert!(2 * data.len() >= 3 * self.width * self.height);
 
         let image = MaybeUninit::zeroed();
